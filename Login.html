@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management System</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+function validate()
+{
+	var u=document.getElementById('user').value;
+var p=document.getElementById('pass').value;
+
+  if(!(u=="admin" || p=="12345") ){
+	  alert("Invalid username or password!!");
+	  document.getElementById('user').value="";
+	  document.getElementById('pass').value="";
+  return false;}
+}
+
+</script>
+</head>
+<body>
+<div class="log">
+<br/><form  action="home.jsp" onsubmit="return validate()" method="post" >
+  <div class="log_data">UserName :<input  id="user"name="log_user"class="log_user" type="text" placeholder="username" pattern="[a-z A-Z]+" required/><br/><br/><br/>
+    Password :<input type="password" id="pass" name="log_pass" class="log_pass" placeholder="password" pattern="[a-z A-Z 0-9 @ # $ &]+" required/>
+    <br/>
+    <button type="submit" class="login">LOGIN</button>  
+        
+ 
+    </div>
+</form> 
+    </div> 
+</body>
+</html>
